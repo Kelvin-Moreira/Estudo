@@ -10,29 +10,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!--Cabeçalho-->
+    <!-- Cabeçalho -->
     <header>
-        <div class="container">
+        <div class="container-header">
             
-            <!--Logotipo + Logomarca-->
+            <!-- Logotipo + Logomarca -->
             <div class="logo">
                 <h1>Eletric
-                    <img class="logomarca" id="contraste-brilho" src="img\logo.png" alt="logo marca">
+                    <img class="logomarca-header" id="contraste-brilho" src="img\logo.png" alt="logo marca">
                     Service
                 </h1>
             </div>
             
-            <!--Menu-->
+            <!-- Menu -->
             <div class="menu-section">
-               
-                <!--Icone do menu-->
-                <div class="wrap">
-                    <div class="menu"></div>
-                    <div class="menu"></div>
-                    <div class="menu"></div>
-                </div>
                 
-                <!--Seção de navegação (nav)-->
+                <!-- Seção de navegação (nav) -->
                 <nav>
                     <ul>
                         <li><a href="#">Inicio</a></li>
@@ -45,26 +38,87 @@
             </div>
         </div>
     </header>
-    <!--Main-->
+
+    <!-- Main -->
     <main>
-        <div>
-            <div class="creditos">
+        <div class="main-container">
+<!--             
+            !-- Creditos da imagem de fundo --
+            <div class="considerações">
                 Imagem de <a href="https://unsplash.com/pt-br/@prasad89" type="perfil" target="_blank">Prasad89</a>
                 por <a href="https://unsplash.com/pt-br" type="site" target="_blank">Unsplash</a>
             </div>
+             -->
+            <!-- Video -->
+            <div class="video">
+                
+                <iframe class="background-video"
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/lvfI-9DMILA" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+
+            </div>
+
         </div>
     </main>
-    <!--section-->
-    <section>
 
-    </section>
-    <!--Rodapé-->
-    <footer class="footer">
-         <address>
-            Criação e desenvolvimento por: 
-            <a href="https://github.com/Kelvin-Moreira" type="perfil" target="_blank">Kelvin Moreira</a> 
-            2023 - Estudio improvisado
-        </address>
+    <!-- Rodapé -->
+    <footer>
+        <div class="container-footer">
+            <!-- conteúdo 1 -->
+            <div class="box">
+                <img class="logomarca-footer" id="contraste-brilho" src="img\logo.png" alt="logo marca">
+            </div>
+
+            <!-- conteúdo 2 -->
+            <div class="box">
+                
+                <h3>Suporte</h3>
+
+                <div class="conteúdo">
+                    <ul><!-- lista de suporte -->
+                        <li><a href="#">FAQ</a></li>
+                        <br>
+                        <li><a href="#">Chat</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- conteúdo 3 -->
+            <div class="box">
+
+                <h3>Endereços</h3>
+
+                <div class="conteúdo">
+
+                    <address>
+                        <div class="address">
+                            <a href="https://www.google.com/maps/place/Av.+Lu%C3%ADs+Viana+Filho,+4370+-+Imbu%C3%AD,+Salvador+-+BA,+41180-000/@-12.9694869,-38.4409057,17z/data=!3m1!4b1!4m6!3m5!1s0x7161a565ac47f61:0xe9e1154962f3eae7!8m2!3d-12.9694869!4d-38.4409057!16s%2Fg%2F11csdvt0g9" 
+                            target="_blank">Av. Luís Viana Filho, 4370 - Imbuí, Salvador - BA, 41180-000.</a>
+                        </div>
+                    </address>
+                    <br>
+                    <address>
+                        Eletric_service@gmail.com
+                    </address>
+
+                </div>
+            </div>
+            <!-- 
+            !-- rodapé final --
+            <div class="rodapé-final">
+                <address>
+                    Criação e desenvolvimento por: 
+                    <a href="https://github.com/Kelvin-Moreira" type="perfil" target="_blank">Kelvin Moreira</a> 
+                    2023 - Estudio improvisado
+                </address>
+            </div>
+            -->
+        </div>    
     </footer>
 </body>
 </html>

@@ -1,8 +1,18 @@
-/* imports fonts */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;700&display=swap');
+/*  =========================================== Imports =============================================*/
 
-/* Ajustes inciais */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400;600;700&display=swap');
+
+/* ============================================== Root ================================================ */
+:root {
+    --white: #EAECEE;
+    --gray-shadow: #566573;
+    --opaque-dark-gray: #5665735a; 
+    --footer-end: #2C3E50 ;
+    ...
+    --ibm-Plex-serif: 'IBM Plex Serif', serif;
+}
+
+/* ========================================== Ajustes globais ====================================== */
 * {
     margin: 0;
     padding: 0;
@@ -18,89 +28,241 @@ html {
 }
 
 body {
-    font-size: 1.6rem;/* explicação */
+    font-size: 1.6rem;/* 1.6rem= 16px*/
 }
 
-/* Designer do cabeçalho */
+/* ============================================ Cabeçalho ============================================ */
+
+/* Designer do cabeçalho e rodapé */
 header, footer {
     background: linear-gradient(90deg/* rotação de 90 graus */,
      #2C3E50, #34495E, #273746, #2E4053, #212F3D , #283747,
      #1C2833, #212F3C, #17202A, #1B2631);
 }
 
-/* ajustes da logomarca */
-.logomarca {
+/* Ajustes da logomarca header */
+.logomarca-header {
     width: 60px;
     height: 60px;
     position: relative;
     top: 15px;
 }
-#contraste-brilho {filter: contrast(80%) brightness(110%);}
 
-/* design do logotipo */
+#contraste-brilho {filter: contrast(80%) brightness(110%);}/* efeito na logomarca */
+
+/* Design do logotipo */
 .logo h1 {
-    margin-top: -18px;
-    color: #EAECEE;
+    margin-bottom: 22px;
+    color: var(--white);
     font-size: 3.8rem /* 38px */;
     font-family: 'IBM Plex Serif', serif;
-    text-shadow: 4px 4px #566573;
+    text-shadow: 2px 2.5px var(--gray-shadow);
     text-transform: uppercase;
 }
 
-/* Alinhamento do container header */
-header .container {
-    height: 95px;
+/* Alinhamento do header container  */
+header .container-header {
+    height: 85px;/* altura da nav-bar */
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    width: 90%;
+    width: 90%;/* ocupar 90% de 1100px */
     max-width: 1100px;
     margin: auto;
 }
 
-/* Ajustes da Nav */
+/* Ajustes na barra de navegação */
 nav ul {
     display: inline-flex;
 }
 
+/* retirar a marcação do <li> */
 nav ul li {
     list-style: none;
  }
- 
+
+ /* Ajustes nav ul li a */
 nav ul li a {
     text-decoration: none;
-    color: #EAECEE;
+    color: var(--white);
     font-size: 2rem /* 20px */;
-    padding: 8px 8px;
-    margin-left: 40px;
+    padding: 8px/* em cima em baixo */ 8px/* na esquerda e direita */;
+    margin: 0/* topo */ 0/* direita */ 0/* inferior */ 40px/* esquerda */;
 
     /* design dos links*/
-    text-shadow: 2px 2px #566573;
+    text-shadow: 2px 2px var(--gray-shadow);
     opacity: 0.8;
     border-radius: 6px;
     font-family: 'IBM Plex Serif', serif;
 }
 
+/* animação basica ao passar o mouse */
 nav ul li a:hover {
-    background-color: #5665735a;
-    transition: 0.2s;
-}
-/* Responsividade */
-@media (max-width: 1131px) {
-    html {
-        font-size: 50%;
-    }
+    background-color: var(--opaque-dark-gray);/* fundo opaco */
+    transition: 0.2s;/* efeito de transição */
 }
 
-@media (max-width: 981px) {
-    html {
-        font-size: 40%;
-    }
+/* Manter a cor do texto mesmo após clicar no link */
+nav ul li a:visited {
+    color: var(--white);
 }
 
-@media (max-width: 860px) {
-    html {
-        font-size: 30%;
-    }
+/* ============================================ Rodapé =============================================*/
+
+/* Ajustes do footer */
+footer {
+    position: absolute;
+    bottom: -235px;/* ficar em baixo */
+    width: 100%;
+}
+
+/* Alinhamento do footer container */
+footer .container-footer {
+    height: 150px;
+    display: flex;
+    width: 90%;/* ocupar 90% de 1100px */
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.container-footer .box {
+    flex-basis: 50%;
+    padding: 10px/* em cima em baixo */ 20px/* na esquerda e direita */;
+}
+
+/* Ajustes box título */
+.box h3 {
+    font-size: 2rem;/* 20px */
+    font-family: 'IBM Plex Serif', serif;
+    text-transform: uppercase;
+    text-shadow: 1px 2px var(--gray-shadow);
+    color: var(--white);
+    text-align: center;
+}
+
+/* Ajustes da .box */
+.box .conteúdo {
+    margin: 20px/* topo */ 0/* direita */ 0/* inferior */ 0/* esquerda */;
+}
+
+.box .conteúdo ul li {
+    list-style: none;
+    margin: 5px/* topo */ 0/* direita */ 0/* inferior */ 0/* esquerda */;
+    text-align: center;
+}
+
+.box .conteúdo ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.5rem;/* 15px */
+    
+    padding: 4px/* em cima em baixo */ 12px/* na esquerda e direita */;
+    text-shadow: 2px 2px var(--gray-shadow);
+    opacity: 0.8;
+    border-radius: 6px;
+    font-family: 'IBM Plex Serif', serif;
+}
+
+/* Animação basica ao passar o mouse */
+.box .conteúdo ul li a:hover {
+    background-color: var(--opaque-dark-gray);/* fundo opaco */
+    transition: 0.2s;/* efeito de transição */
+}
+
+/* Manter a cor d texto mesmo após clicar no link */
+.box .conteúdo ul li a:visited {
+    color: var(--white);
+}
+
+.box .conteúdo address {
+    text-align: center;
+    color: var(--white);
+    font-size: 1.5rem;/* 15px */
+
+    text-shadow: 2px 2px var(--gray-shadow);
+    opacity: 0.8;
+}
+
+.box .conteúdo address .address {
+    text-align: center;
+    color: var(--white);
+    font-size: 1.5rem;/* 15px */
+
+    padding: 4px/* em cima em baixo */ 12px/* na esquerda e direita */;
+    text-shadow: 2px 2px var(--gray-shadow);
+    opacity: 0.8;
+    border-radius: 6px;
+}
+
+.box .conteúdo address .address:hover {
+    background-color: var(--opaque-dark-gray);/* fundo opaco */
+    transition: 0.2s;/* efeito de transição */
+}
+
+/* Manter a cor do texto mesmo após clicar no link */
+.box .conteúdo address .address a:visited {
+    color: var(--white);
+}
+
+.box .conteúdo address a {
+    text-decoration: none;
+}
+
+/* Ajustes da logomarca footer */
+.logomarca-footer {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 15px/* topo */ 71.86px/* direita */ 15px/* inferior */ 71.86px/* esquerda */;
+    
+}
+
+/* .rodapé-final {
+    background-color: var(--footer-end);
+    height: 50px;
+
+    
+}
+.rodapé-final address {
+    position: absolute;
+    display: inline-flex;
+    margin-top: 15px;
+    margin-left: ;
+
+} */
+
+/* ================================================== Main =========================================================== */
+/* imagem de fundo */
+/* body {
+    background-image: url(img/Body.unsplash.jpg);
+    background-repeat: no-repeat;/* Não vai repetir a imagem *
+    background-size: cover;
+    background-position: center center;
+}
+ */
+main .main-container {
+    height: 432px;
+    display: flex;
+    width: 90%;/* ocupar 90% de 1100px */
+   /*  justify-content: space-around; */
+    max-width: 1100px;
+    margin: auto;
+}
+/* 
+.main-container div.considerações {
+    flex-basis: 50%;
+    padding: 10px/* em cima em baixo * 20px/* na esquerda e direita *;
+} */
+
+.background-video {
+    position: absolute;
+    right: 0;
+    bottom: 50;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
 }
