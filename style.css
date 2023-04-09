@@ -4,11 +4,12 @@
 
 /* ============================================== Root ================================================ */
 :root {
+    /* cores */
     --white: #EAECEE;
     --gray-shadow: #566573;
     --opaque-dark-gray: #5665735a; 
     --footer-end: #2C3E50 ;
-    ...
+    /* fonte */
     --ibm-Plex-serif: 'IBM Plex Serif', serif;
 }
 
@@ -219,42 +220,7 @@ footer .container-footer {
     
 }
 
-/* .rodapé-final {
-    background-color: var(--footer-end);
-    height: 50px;
-
-    
-}
-.rodapé-final address {
-    position: absolute;
-    display: inline-flex;
-    margin-top: 15px;
-    margin-left: ;
-
-} */
-
 /* ================================================== Main =========================================================== */
-/* imagem de fundo */
-/* body {
-    background-image: url(img/Body.unsplash.jpg);
-    background-repeat: no-repeat;/* Não vai repetir a imagem *
-    background-size: cover;
-    background-position: center center;
-}
- */
-main .main-container {
-    height: 432px;
-    display: flex;
-    width: 90%;/* ocupar 90% de 1100px */
-   /*  justify-content: space-around; */
-    max-width: 1100px;
-    margin: auto;
-}
-/* 
-.main-container div.considerações {
-    flex-basis: 50%;
-    padding: 10px/* em cima em baixo * 20px/* na esquerda e direita *;
-} */
 
 .background-video {
     position: absolute;

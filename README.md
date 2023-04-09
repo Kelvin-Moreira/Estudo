@@ -8,9 +8,6 @@ Atividade pratica da matéria desenvolvimento de aplicações para web, proposto
 [HTML Color Codes](https://htmlcolorcodes.com/)
 
 ### Imagens
-[Iconfinder](https://www.iconfinder.com/)
-
-[Unsplash](https://unsplash.com/pt-br)
 
 [Pngwing](https://www.pngwing.com/pt/)
 
